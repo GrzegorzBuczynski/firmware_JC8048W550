@@ -1,0 +1,1 @@
+# firmware_JC8048W550
