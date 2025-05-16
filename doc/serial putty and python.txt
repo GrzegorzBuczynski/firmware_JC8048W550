@@ -1,0 +1,6 @@
+1. python -m serial.tools.miniterm (jeśli masz zainstalowany pyserial)
+python -m serial.tools.miniterm COM8 115200
+
+2. serial w windows jesli masz putty 
+ putty (Windows GUI)
+To nie jest konsola, ale jeśli wolisz okienko – wybierz "Serial", wpisz COM8 i prędkość, np. 115200.

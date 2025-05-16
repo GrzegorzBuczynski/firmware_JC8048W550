@@ -1,0 +1,21 @@
+sciezka do narzedzi w nim esptool
+cd C:\Users\stacja\AppData\Local\Programs\Python\Python313\Scripts\
+
+tak uruchamia sie przez moduł ale nie mam go zainstalowanego
+python -m esptool --port COM8 chip_id
+
+jesli esptool dodany do path to bez python -m
+esptool --port COM8 read_flash 0x00000 0x800000 backup_s3_full.bin // czyta tylko 8MB
+esptool --chip esp32s3 --port COM8 write_flash 0x00000 backup_s3_full.bin // zapisuje  backup_s3_full.bin do pamieci
+
+
+esptool --port COM8 read_flash 0x00000 0x1000000 backup_16MB.bin // czyta 16MB
+esptool --chip esp32s3 --port COM8 write_flash 0x00000 backup_16MB.bin
+
+esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash \
+  0x1000 bootloader.bin \
+  0x8000 partitions.bin \
+  0x10000 firmware.bin // zapisuje 3 pliki
+
+
+
